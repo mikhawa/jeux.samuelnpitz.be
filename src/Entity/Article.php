@@ -13,7 +13,7 @@ class Article
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ["unsigned" => true])]
     private ?int $id = null;
 
     #[ORM\Column(length: 200)]
@@ -25,13 +25,13 @@ class Article
     #[ORM\Column(type: Types::TEXT)]
     private ?string $Content = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, options: ["default" => "CURRENT_TIMESTAMP"])]
     private ?\DateTimeInterface $DateCreate = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true, options: ["update" => "CURRENT_TIMESTAMP"])]
     private ?\DateTimeInterface $DateUpdate = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: Types::BOOLEAN, options: ["default" => false])]
     private ?bool $IsPublished = null;
 
     public function getId(): ?int
