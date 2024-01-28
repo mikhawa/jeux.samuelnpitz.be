@@ -28,7 +28,7 @@ class Article
     #[ORM\Column(type: Types::DATETIME_MUTABLE, options: ["default" => "CURRENT_TIMESTAMP"])]
     private ?\DateTimeInterface $DateCreate = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true, options: ["update" => "CURRENT_TIMESTAMP"])]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $DateUpdate = null;
 
     #[ORM\Column(type: Types::BOOLEAN, options: ["default" => false])]
