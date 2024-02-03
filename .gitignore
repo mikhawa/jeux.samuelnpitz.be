@@ -27,3 +27,7 @@
 ###> jetbrains/phpstorm ###
 .idea/
 ###< jetbrains/phpstormr ###
+
+###> Day design ###
+datas/Day/
+###< Day design ###
