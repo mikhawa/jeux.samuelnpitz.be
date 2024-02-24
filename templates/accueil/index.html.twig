@@ -1,7 +1,84 @@
 {% extends 'template.html.twig' %}
 
 {% block title %}{{ parent() }} | Accueil{% endblock %}
+{% block navbar %}
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+            <li><a class="nav-link scrollto" href="#about">A propos de moi</a></li>
+            <li><a class="nav-link scrollto" href="#lesjeux">Les Jeux</a></li>
+            <li><a class="nav-link scrollto" href="{{ path("admin") }}">Connexion</a></li>
+        </ul>
 
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+{% endblock %}
 {% block pricing %}{% endblock %}
 {% block team %}{% endblock %}
+{% block clients %}{% endblock %}
+{% block actions %}{% endblock %}
+{% block portfolio %}{% endblock %}
+{% block contact %}{% endblock %}
+{% block footer %}    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>Samuel Pitz</h3>
+                           <p>Suivez-moi sur les réseaux sociaux</p>
+                            <div class="social-links mt-3">
+                                <a href="https://www.facebook.com/samuel.pitz" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/samuelpitz2008/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.youtube.com/@samuelpitz685" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Mes autres sites</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.samuelnpitz.be/" target="_blank">Samuelnpitz.be</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://anniversaires.samuelnpitz.be/" target="_blank">Anniversaires</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://tempspasse.samuelnpitz.be/" target="_blank">Le Temps Passe</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://emotions.samuelnpitz.be/" target="_blank">Les Emotions</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Le site de mes amis</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.charlesjpitz.be/" target="_blank">Charles Jacques Pitz</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://www.michaeljpitz.com/" target="_blank">Michaël Jacques Pitz</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://fr.wikipedia.org/wiki/Nicolas_Pitz" target="_blank">Nicolas Stéphane Pitz</a></li>
+
+                        </ul>
+                    </div>
+
+                    <!--<div class="col-lg-4 col-md-6 footer-newsletter">
+
+
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->{% endblock %}
+
 

@@ -168,6 +168,7 @@
             </div>
         </section><!-- End Why Us Section -->
         {% endblock %}
+        {% block clients %}
         <!-- ======= Clients Section ======= -->
         <section id="clients" class="clients">
             <div class="container" data-aos="zoom-in">
@@ -202,6 +203,7 @@
 
             </div>
         </section><!-- End Clients Section -->
+        {% endblock %}
         {% block jeux %}
         <!-- ======= Services Section ======= -->
         <section id="lesjeux" class="services">
@@ -267,6 +269,7 @@
             </div>
         </section><!-- End Services Section -->
         {% endblock %}
+        {% block actions %}
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
             <div class="container" data-aos="zoom-in">
@@ -279,7 +282,8 @@
 
             </div>
         </section><!-- End Cta Section -->
-
+        {% endblock %}
+        {% block portfolio %}
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio">
             <div class="container">
@@ -397,6 +401,7 @@
 
             </div>
         </section><!-- End Portfolio Section -->
+        {% endblock %}
         {% block pricing %}
         <!-- ======= Pricing Section ======= -->
         <section id="pricing" class="pricing">
@@ -534,6 +539,7 @@
             </div>
         </section><!-- End Team Section -->
         {% endblock %}
+        {% block contact %}
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
             <div class="container">
@@ -606,9 +612,9 @@
 
             </div>
         </section><!-- End Contact Section -->
-
+{% endblock %}
     </main><!-- End #main -->
-
+{% block footer %}
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="footer-top">
@@ -682,4 +688,5 @@
             </div>
         </div>
     </footer><!-- End Footer -->
+    {% endblock %}
 {% endblock %}
