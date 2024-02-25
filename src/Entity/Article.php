@@ -34,6 +34,9 @@ class Article
     #[ORM\Column(type: Types::BOOLEAN, options: ["default" => false])]
     private ?bool $IsPublished = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Theimg = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -107,6 +110,18 @@ class Article
     public function setIsPublished(bool $IsPublished): static
     {
         $this->IsPublished = $IsPublished;
+
+        return $this;
+    }
+
+    public function getTheimg(): ?string
+    {
+        return $this->Theimg;
+    }
+
+    public function setTheimg(?string $Theimg): static
+    {
+        $this->Theimg = $Theimg;
 
         return $this;
     }
