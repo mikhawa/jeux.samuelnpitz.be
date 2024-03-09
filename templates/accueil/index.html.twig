@@ -20,7 +20,35 @@
 {% block portfolio %}{% endblock %}
 {% block contact %}{% endblock %}
 {% block jeux %}
-{{ dump(articles) }}
+    <section id="lesjeux" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Les Jeux</span>
+                <h2>Les Jeux</h2>
+                <p>Voici la liste de mes jeux préférés</p>
+            </div>
+            {% set temps = 0 %}
+{% for item in articles %}
+            {% if loop.index0 / 3 == 0 %}
+            <div class="row">
+            {% endif %}
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ temps }}">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-world"></i></div>
+                        <h4><a href="">{{ item.Title }}</a></h4>
+                        <p>{{ item.Content|raw }}</p>
+                    </div>
+                    {% if loop.index % 3 == 0 %}
+                </div>
+    {% endif %}
+
+            </div>
+    {% set temps = temps + 150 %}
+            {% endfor %}
+        </div>
+    </section><!-- End Services Section -->
+
 {% endblock %}
 {% block footer %}    <!-- ======= Footer ======= -->
     <footer id="footer">

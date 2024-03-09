@@ -16,7 +16,7 @@ class AccueilController extends AbstractController
     public function index(EntityManagerInterface $entityManager): Response
     {
         # Récupération de la table Article
-        $articleRepository = $entityManager->getRepository(Article::class)->findAll();
+        $articleRepository = $entityManager->getRepository(Article::class)->findBy(['IsPublished' => true], ['DateCreate' => 'DESC']);
 
         return $this->render('accueil/index.html.twig', [
             'articles' => $articleRepository,
